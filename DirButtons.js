@@ -2,7 +2,7 @@ const screenWidth = window.innerWidth
 const screenHeight = window.innerHeight
 
 export default class button{
-  constructor(dir = 'up', width, height= 20, x = 20, y = 20) {
+  constructor(dir, x, y, width, height) {
     this.img = new Image()
     let imgSrc = `images/${dir}.png`
     this.img.src = imgSrc    
@@ -10,6 +10,15 @@ export default class button{
     this.height = height
     this.x = x
     this.y = y
+  }
+ 
+  pressed(X, Y){
+    return( 
+      X >= this.x && 
+      X <= this.x + this.width && 
+      Y >=  this.y && 
+      Y <= this.y+this.height
+    )
   }
  
   drawToCanvas(ctx) {
