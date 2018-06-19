@@ -1,8 +1,8 @@
-import Worm from './Worm'
-import DirButtons from './DirButtons'
-import StartButton from './StartButton'
-import Background from './Background'
-import Score from './Score'
+import Worm from './worm'
+import DirButtons from './dirButtons'
+import StartButton from './startButton'
+import Background from './background'
+import Score from './score'
 
 const W = window.innerWidth
 const H = window.innerHeight
